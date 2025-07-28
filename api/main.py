@@ -50,7 +50,7 @@ async def root():
     )
 
 # Health check endpoint
-@app.get("/health", response_model=APIResponse)
+@app.get("/health", response_model=APIResponse) 
 async def health_check():
     """Health check endpoint"""
     return APIResponse(
@@ -60,7 +60,7 @@ async def health_check():
     )
 
 # Update the quiz submission endpoint
-@app.post("/api/quiz/submit", response_model=APIResponse)
+@app.post("/quiz/submit", response_model=APIResponse)
 async def submit_quiz(quiz: QuizSubmission):
     """Submit quiz and get car matches with real matching logic"""
     try:
@@ -153,7 +153,7 @@ async def search_cars(search_request: CarSearchRequest):
         logger.error(f"Error searching cars: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 # Lead capture endpoints
-@app.post("/api/leads/capture", response_model=APIResponse)
+@app.post("/lead/capture", response_model=APIResponse)
 async def capture_lead(lead: LeadCapture):
     """Capture lead and send email"""
     try:
@@ -180,7 +180,7 @@ async def capture_lead(lead: LeadCapture):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Test endpoints for debugging
-@app.get("/api/test/cars", response_model=APIResponse)
+@app.get("/test/cars", response_model=APIResponse)
 async def test_get_cars():
     """Test endpoint to get all cars"""
     try:
@@ -193,7 +193,7 @@ async def test_get_cars():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@app.get("/api/cars/makes", response_model=APIResponse)
+@app.get("/cars/makes", response_model=APIResponse)
 async def get_car_makes():
     """Get all available car makes"""
     try:
@@ -207,7 +207,7 @@ async def get_car_makes():
         logger.error(f"Error getting makes: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/api/cars/models", response_model=APIResponse)
+@app.get("/cars/models", response_model=APIResponse)
 async def get_car_models(make: str):
     """Get models for a specific make"""
     try:
