@@ -1,0 +1,50 @@
+/* Move @import to the very top - BEFORE Tailwind directives */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components; 
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Satoshi', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1D1D1F;
+  background-color: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6858E3;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5A47D1;
+}
+
+button, input, select, textarea {
+  transition: all 0.3s ease;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid #6858E3;
+  outline-offset: 2px;
+}

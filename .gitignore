@@ -1,0 +1,38 @@
+ 
+# SECURITY - Never commit these files!
+.env
+api/.env
+frontend/.env
+*.env
+
+# Python compiled files (may contain secrets)
+__pycache__/
+*.pyc
+*.pyo
+api/__pycache__/
+
+# Node.js dependencies (huge, unnecessary)
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+.cache/
+.tmp/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Build outputs
+dist/
+build/
+
+# Vercel deployment
+.vercel
