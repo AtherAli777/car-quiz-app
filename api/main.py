@@ -109,7 +109,7 @@ async def submit_quiz(quiz: QuizSubmission):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Car search endpoints
-@app.post("/api/cars/search", response_model=APIResponse)
+@app.post("/cars/search", response_model=APIResponse)
 async def search_cars(search_request: CarSearchRequest):
     """Search for specific car make/model"""
     try:

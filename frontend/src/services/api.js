@@ -56,10 +56,10 @@ export const carQuizApi = {
   healthCheck: () => api.get('/health'),
   
   // Quiz endpoints
-  submitQuiz: (quizData) => api.post('/api/quiz/submit', quizData),
+  submitQuiz: (quizData) => api.post('/quiz/submit', quizData),
   
   // Test endpoints
-  testGetCars: () => api.get('/api/test/cars'),
+  testGetCars: () => api.get('/test/cars'),
 };
 
 export default api;
